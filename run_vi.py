@@ -1,7 +1,6 @@
 import json
 from value_iteration import do_value_iteration
 
-# shelf_life_values = [3, 5, 7, 10, 14]
 shelf_life_values = [2, 4, 8]
 results = []
 
@@ -14,5 +13,5 @@ for shelf_life in shelf_life_values:
                     "values": values_v.tolist(),
                     "policy": optimal_actions.tolist()})
 
-with open("vi_results_mu10_oc50.json", "w") as file:
+with open("vi_results_mu10.json", "w") as file:
     json.dump(results, file, indent=2)
